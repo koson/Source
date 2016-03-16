@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B497F366-507D-4277-862E-6CD31FE0C962}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plugins.Airnose01</RootNamespace>
+    <AssemblyName>Plugins.Airnose01</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Binaries\Plugins\Plugins.Airnose01\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotSpatial.Controls">
+      <HintPath>..\..\packages\DotSpatial.Controls.1.6.1\lib\net40-Client\DotSpatial.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Extensions">
+      <HintPath>..\..\packages\DotSpatial.Extensions.1.6.1\lib\net40-Client\DotSpatial.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotSpatial.Symbology">
+      <HintPath>..\..\packages\DotSpatial.Symbology.1.6.1\lib\net40-Client\DotSpatial.Symbology.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIRNOSE_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addUser_32x32.jpg" />
+    <None Include="Resources\Download_32x32.jpg" />
+    <None Include="Resources\Upload_32x32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editUser_32x32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\errorImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\errorImage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HydroDesktopSplashLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hydroshare_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hydroshare_logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_connection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_model.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change_dir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\component_image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\component_image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HydroModelerLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\model_image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\model_image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pan.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\select.png" />
+    <None Include="Resources\xml_icon.png" />
+    <None Include="Resources\trigger.png" />
+    <None Include="Resources\Target.cur" />
+    <None Include="Resources\Source.cur" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
