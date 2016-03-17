@@ -25,7 +25,11 @@ namespace Plugins.Airnose01
         private const string _tablePanelName = "Table";
 
 
+         
+
         private Dictionary<string, object> rps_dict = new Dictionary<string, object>();
+        private cAirnoseView airnoseViewControl;
+        private string kAirnoseView;
 
         public override void Deactivate()
         {
@@ -77,8 +81,27 @@ namespace Plugins.Airnose01
             //// Add a dockable panel
             //Add_HM_Panel();
 
+            airnoseViewControl = new cAirnoseView(this) { Dock = DockStyle.Fill };
+            var tableViewPanel = new DockablePanel
+            {
+                Key = kAirnoseView,
+                Caption = _tablePanelName,
+                InnerControl = airnoseViewControl,
+                Dock = DockStyle.Fill,
+                DefaultSortOrder = 10
+            };
+            App.DockManager.Add(tableViewPanel);
+            App.DockManager.ActivePanelChanged += DockManager_ActivePanelChanged;
+
+
             // activate plugin
             base.Activate();
+        }
+
+        private void DockManager_ActivePanelChanged(object sender, DockablePanelEventArgs e)
+        {
+            if (e.ActivePanelKey == kAirnoseView)
+                App.HeaderControl.SelectRoot(kAirnoseView);
         }
 
         private void rbRefreshTheme_Click(object sender, EventArgs e)
